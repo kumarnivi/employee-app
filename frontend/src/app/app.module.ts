@@ -7,6 +7,8 @@ import { LeaveAllocationComponent } from './components/leave-allocation/leave-al
 import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LeaverequestComponent } from './components/leaverequest/leaverequest.component';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,6 +22,7 @@ import { LeaverequestComponent } from './components/leaverequest/leaverequest.co
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     
   ],
   providers: [],

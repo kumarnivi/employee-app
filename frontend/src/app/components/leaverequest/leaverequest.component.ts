@@ -6,8 +6,8 @@ import { Component , OnInit } from '@angular/core';
   styleUrls: ['./leaverequest.component.scss']
 })
 export class LeaverequestComponent implements OnInit{
- 
-
+  selectedType: string | null = 'Sort by';
+  originalData: any[] = [];
   data: any[] = []; // Your table data
   itemsPerPage = 3; // Number of items to display per page
   currentPage = 1; // Current page number
@@ -23,13 +23,15 @@ export class LeaverequestComponent implements OnInit{
         duration: '21st Jan to 24th',
         type: 'Casual',
         status: 'Pending',
-        src:'../../../assets/schedule.png'
+        src:'../../../assets/schedule.png',
+        dot: ''
       },
       {
         duration: '25th Feb to 28th',
         type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        status: 'Denied',
+        src:'../../../assets/coconut-tree.png',
+        dot:'	'
       },
 
       {
@@ -43,48 +45,48 @@ export class LeaverequestComponent implements OnInit{
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       }, {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '21st Jan to 24th',
@@ -110,48 +112,48 @@ export class LeaverequestComponent implements OnInit{
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       }, {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '21st Jan to 24th',
@@ -177,58 +179,76 @@ export class LeaverequestComponent implements OnInit{
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       }, {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/medical.png'
       },
       // Add more data items as needed
     ];
 
+    this.originalData = [...this.data];
 
     // Calculate the total number of pages
     this.totalPages = Math.ceil(this.data.length / this.itemsPerPage);
 
     // Initialize the pages array
     this.updatePages();
+  }
+
+ 
+  filterDataByType(): void {
+    if (this.selectedType) {
+      this.data = this.originalData.filter(item => item.type === this.selectedType);
+    } else {
+      // If no type is selected, reset the data to the original data
+      this.data = [...this.originalData];
+    }
+  
+    // Recalculate the total number of pages and update the pages array
+    this.totalPages = Math.ceil(this.data.length / this.itemsPerPage);
+    this.updatePages();
+  
+    // Reset the current page to 1
+    this.currentPage = 1;
   }
 
   // Helper function to update the pages array
