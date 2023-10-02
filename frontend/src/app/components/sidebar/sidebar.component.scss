@@ -162,10 +162,10 @@ justify-content: center; }
  
 .modal-content{
   width: 708px;
+  margin-top: 165px;
 }
 
 .btn-position{
-  
   top: 104px;
   left: 116px;
   padding: 5px 15px 5px 15px;
@@ -175,7 +175,6 @@ justify-content: center; }
   display: none;
 }
 
-/* Show the button when the parent element is hovered over */
 .grid-box:hover .hover-button {
   display: inline-block;
  
@@ -190,6 +189,10 @@ justify-content: center; }
   border: 2px solid #C083FA;
 }
 
+
+#exampleModal{
+  backdrop-filter: blur(1px);
+}
 
 // leave allocation
 

@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LeaverequestComponent } from './components/leaverequest/leaverequest.component';
 import { FormsModule } from '@angular/forms';
+import { LeaveModelComponent } from './components/leave-model/leave-model.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     SidebarComponent,
     LeaveAllocationComponent,
     NavbarComponent,
-    LeaverequestComponent
+    LeaverequestComponent,
+    LeaveModelComponent
    
   ],
   imports: [
