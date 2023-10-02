@@ -1,0 +1,42 @@
+@import '../../../styles.scss';
+
+span.box{
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+
+}
+
+.col-sm-3{
+    display: flex;
+    align-items: normal;
+    justify-content: center;
+}
+
+.col{
+    background-color: #f4f4f7;
+    border-radius: 10px;
+    max-height: 250px;
+    height: 100%;
+    padding: 10px;
+    margin: 5px;
+
+}
+
+.small-text{
+    font-size: 12px;
+   
+}
+span.d {
+    vertical-align: sub;
+    font-size: 12px;
+  }
+ 
+.days{
+    font-size: 25px;
+    font-weight: 500;
+}  
+
+h3{
+    font-weight: 600;
+}
