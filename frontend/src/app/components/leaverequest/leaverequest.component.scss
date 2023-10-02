@@ -1,0 +1,88 @@
+@import '../../../styles.scss';
+
+table{
+    width: 100%;
+   
+}
+
+.leave-container{
+    background-color: #f4f4f7;
+    border-radius: 10px;
+}
+
+.col-9{
+   
+}
+
+.main-row div{
+ display: flex;
+ justify-content: space-between;
+ padding-top: 15px;
+ margin-left: 20px;
+
+}
+
+.main-row div .filter {
+    padding: 0;
+    margin-right: 48px;
+}
+
+.main{
+    justify-content: flex-end;
+    margin-right: 15px;
+}
+
+span{
+    background-color: #ffff;
+   border-radius: 20px;
+    color: black;
+}
+
+.status{
+    background-color: #ffff;
+    border-radius: 20px;
+     color: black;
+     padding: 3px 10px 3px 10px;
+}
+
+th{
+    padding: 20px;
+    margin-left: 15px;
+    width: 200px;
+    
+}
+
+tr{
+    padding: 20px;
+   
+   
+}
+
+td{
+    padding: 20px;
+    margin-left: 15px;
+}
+
+/* Active page style */
+.pagination .page-item.active .page-link {
+    /* Change to your desired active background color */
+    background-color: transparent !important;
+    border-color: #C083FA !important; /* Change to your desired active border color */
+    color: #000; /* Change to your desired active text color */
+    margin: 5px;
+    border-radius: 5px;
+  }
+  
+  /* Inactive page style */
+  .pagination .page-item:not(.active) .page-link {
+    background-color: #f8f9fa; /* Change to your desired inactive background color */
+    border-color: #dee2e6; /* Change to your desired inactive border color */
+    color: #212529; /* Change to your desired inactive text color */
+    margin: 5px;
+    border-radius: 5px;
+  }
+
+  .pagination{
+    padding: 10px;
+  }
+  

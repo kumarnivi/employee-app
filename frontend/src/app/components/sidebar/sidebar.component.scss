@@ -41,7 +41,7 @@ justify-content: center; }
   }
   
   span{
-    font-weight: 700;
+    font-weight: 500;
     transition: .15s linear color;
   }
 }
@@ -97,7 +97,7 @@ justify-content: center; }
     position: relative;
   color: black;
     padding-left: 66px;
-    font-weight: 600;
+    font-weight: 500;
     
     &:before:hover{
       content: '';
@@ -136,7 +136,7 @@ justify-content: center; }
   border-radius: 50px;
   background-color: #C083FA;
   color: black;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .bottom-text{
@@ -144,3 +144,5 @@ justify-content: center; }
   margin-left: 50px;
   margin-top: 20px;
 }
+
+ 
