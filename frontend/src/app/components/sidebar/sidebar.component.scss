@@ -35,9 +35,7 @@ justify-content: center; }
     text-decoration: none;
     transition: .15s linear color;
     
-    &:hover{
-      
-    }
+   
   }
   
   span{
@@ -48,21 +46,12 @@ justify-content: center; }
 
 // MAIN NAV
 .main-nav{
-  
-  ul{
-   
-  }
-  
-  li{
-   
-  }
+ 
   
   a{
     padding: 1.1em 0;
    
-    &:hover{
-     
-    }
+
   }
 }
 
@@ -79,8 +68,7 @@ justify-content: center; }
     display: block;
     height: 5.5em;
     text-align: center;
-    &:hover{
-    }
+   
   }
 }
 
@@ -138,10 +126,13 @@ justify-content: center; }
   color: black;
   font-weight: 500;
 }
+
+
+//   model styles
 .btn-closer{
   padding: 15px 35px 15px 35px;
     border: none;
-    border-radius: 10px;
+    border-radius: 45px;
     background-color: #f4f4f7;
     color: black;
     width: 100%;
@@ -155,19 +146,18 @@ justify-content: center; }
 }
 
 
-.btn:hover{
-  background-color: #F4F4F7;
-  color: #C083FA;
-}
+// .btn:hover{
+//   background-color: #F4F4F7;
+//   color: #C083FA;
+// }
  
 .modal-content{
   width: 708px;
   margin-top: 165px;
+  border: none;
 }
 
 .btn-position{
-  top: 104px;
-  left: 116px;
   padding: 5px 15px 5px 15px;
 }
 
@@ -186,12 +176,17 @@ justify-content: center; }
 }
 
 .col:hover{
-  border: 2px solid #C083FA;
+  border: 1px solid #C083FA;
+  background-color: #c083fa1d;
 }
 
 
 #exampleModal{
   backdrop-filter: blur(1px);
+}
+
+.modal-footer{
+  border: none !important;
 }
 
 // leave allocation

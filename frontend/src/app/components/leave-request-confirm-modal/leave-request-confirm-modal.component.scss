@@ -13,12 +13,17 @@ h3{
 }
 
 .modal-content{
-    width: 977px;
-    height: 673px;
+    width: 878px;
+    height: 448px;
     max-height: 100vh;
     border: none;
   }
   
+
+  #exampleModal3{
+    backdrop-filter: blur(1px);
+  }
+
 
 .btn-close{
     margin-right: 10px;
@@ -57,46 +62,17 @@ h3{
   }
 
 
-  .form-control{
-    background-color: #f4f4f7;
-    border: none;
-    border-radius: 10px;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
+.leave-summery-type {
+    padding: 10px;
+}
 
-
-  .btn-close1 {
-    margin-right: 10px;
-    color: black;
-    padding: 5px;
-    margin-right: 5px;
-  }
-
-  .calender{
+span {
     background-color: #f4f4f7;
     border-radius: 20px;
-    padding: 5px 10px 5px 10px
+    color: black;
+    padding: 3px 10px 3px 10px;
   }
 
-  .leave-summery-type{
-    font-size: 14px;
-    padding-bottom: 15px;
+  .modal-footer{
+    border: none !important;
   }
-
-
-  .divider {
-    border-left: 1px solid gray;
-    height: 100%;
-    width: 0;
-}
-
-  
-
-.col-md-1{
-  width: 0 !important;
-}
-
-.modal-footer{
-  border: none !important;
-}

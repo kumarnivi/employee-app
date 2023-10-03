@@ -27,8 +27,8 @@
           <thead>
             <tr>
               <th>DURATION</th>
-              <th>TYPE</th>
-              <th>STATUS</th>
+              <th class="text-center">TYPE</th>
+              <th class="text-end">STATUS</th>
             </tr>
           </thead>
 
@@ -42,13 +42,13 @@
                 )
               "
             >
-              <td>{{ item.duration }}</td>
-              <td>
+              <td>{{ item.duration }} <span class="status">{{item.day}}</span></td>
+              <td class="td-type">
                 <span class="status">
                   <img src="{{ item.src }}" alt="img-leav" width="16" height="16" /> {{ item.type }}</span
                 >
               </td>
-              <td>
+              <td class="td-status">
                 <span class="status">
                   <span
                     class="status-indicator"

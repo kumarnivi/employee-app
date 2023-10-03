@@ -8,12 +8,22 @@ table {
   }
 
   thead th {
-    padding: 8px ; 
+    padding: 10px 20px 10px 20px ; 
     text-align: left;
     border-bottom: 1px solid #ccc; 
     border-top: 1px solid #ccc;
-    // background-image: url(');
+    color: gray;
+    font-weight: 400;
+
   }
+
+  .td-type{
+    text-align: center;
+  }
+
+.td-status{
+  text-align: right;
+}
 
 .leave-container {
   background-color: #f4f4f7;
@@ -64,6 +74,7 @@ tr {
 td {
   padding: 20px;
   margin-left: 15px;
+  font-size: 14px;
 }
 
 /* Active page style */
@@ -117,3 +128,8 @@ td {
 .denied {
   background-color: red;
 }
+
+ h3{
+  font-size: 18px;
+  font-weight: 700;
+ }

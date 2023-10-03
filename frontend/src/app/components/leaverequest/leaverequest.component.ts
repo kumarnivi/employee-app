@@ -24,6 +24,7 @@ export class LeaverequestComponent implements OnInit{
         type: 'Casual',
         status: 'Pending',
         src:'../../../assets/schedule.png',
+        day: '1 Day',
         dot: ''
       },
       {
@@ -31,6 +32,7 @@ export class LeaverequestComponent implements OnInit{
         type: 'Annual',
         status: 'Denied',
         src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
         dot:'	'
       },
 
@@ -38,14 +40,16 @@ export class LeaverequestComponent implements OnInit{
         duration: '25th Feb to 28th',
         type: 'Annual',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
 
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/medical.png',
+        day: '2 Day',
       },
       {
         duration: '25th Feb to 28th',
@@ -57,7 +61,8 @@ export class LeaverequestComponent implements OnInit{
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/medical.png',
+        day: '2 Day',
       },
       {
         duration: '25th Feb to 28th',
