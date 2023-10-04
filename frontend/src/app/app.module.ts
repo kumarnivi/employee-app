@@ -18,6 +18,8 @@ import { GraphComponent } from './admin/graph/graph.component';
 import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
 // import { CanvasJSAngularStockChartsModule } from '@canvasjs/angular-stockcharts';
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AddSubadminComponent } from './admin/add-subadmin/add-subadmin.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,8 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     LeaveRequestConfirmModalComponent,
     NavsideComponent,
     GraphComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    AddSubadminComponent
    
   ],
   imports: [
@@ -43,7 +46,8 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule,
+    NgbModule
 
     
   ],

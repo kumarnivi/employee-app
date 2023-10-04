@@ -1,10 +1,24 @@
-<!-- <div class="calendar">
-    <angular-calendar
-      [view]="view"
-      [viewDate]="viewDate"
-      [events]="events"
-      [activeDayIsOpen]="true"
-      (eventClicked)="eventClicked($event)"
-      (dayClicked)="dayClicked($event)"
-    ></angular-calendar>
-  </div> -->
+<p>Example of the range selection</p>
+
+<ngb-datepicker #dp (dateSelect)="onDateSelection($event)" [displayMonths]="1" [dayTemplate]="t" outsideDays="hidden">
+</ngb-datepicker>
+
+<ng-template #t let-date let-focused="focused">
+	<span
+		class="custom-day"
+		[class.focused]="focused"
+		[class.range]="isRange(date)"
+		[class.faded]="isHovered(date) || isInside(date)"
+		(mouseenter)="hoveredDate = date"
+		(mouseleave)="hoveredDate = null"
+	>
+		{{ date.day }}
+	</span>
+</ng-template>
+
+<hr />
+
+<span>From: {{ fromDate | json }} </span>
+<span>To: {{ toDate | json }}</span>
+<!-- <pre> </pre>
+<pre> </pre> -->
