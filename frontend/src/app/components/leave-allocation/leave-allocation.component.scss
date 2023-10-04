@@ -1,8 +1,7 @@
 @import '../../../styles.scss';
 
 .main{
-    justify-content: flex-end;
-    margin-right: 15px;
+    padding: 25px;
 }
 
 span.box{
@@ -45,4 +44,5 @@ span.d {
 h3{
     font-weight: 600;
     font-size: 18px;
+    padding-bottom: 10px;
 }

@@ -1,13 +1,13 @@
 @import '../../../styles.scss';
 
-*, :before, :after{ box-sizing: border-box; }
-// FONTS
+// *, :before, :after{ box-sizing: border-box; }
+// // FONTS
 
-// COLORS
+// // COLORS
 
 
 
-// REUSABLE STYLES
+// // REUSABLE STYLES
 .unstyled{ list-style: none; padding: 0; margin: 0;
   a{ text-decoration: none; }
 }
@@ -17,12 +17,26 @@ justify-content: center; }
 }
 
 // HEADER STYLES
-.header{
-  position: fixed;
-  left: 0; top: 0; bottom: 0;
-  width: 17.5em;
-  background: #F4F4F7;
+.sidebar{
+  // position: fixed;
+  // left: 0; top: 0; bottom: 0;
+  // width: 17.5em;
+  // background: #F4F4F7;
+position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #f4f4f7;
+    padding: 29px 19px;
+    z-index: 99;
+    transition: all 0.5s ease;
+
+
 }
+
+
+
 
 .logo{
   text-transform: lowercase;
@@ -82,11 +96,14 @@ justify-content: center; }
   }
   
   a{
-    display: block;
+    display: inline-flex;
+    align-items: center;
     position: relative;
-  color: black;
-    padding-left: 66px;
+    justify-content: center;
+    color: black;
+    padding-left: 49px;
     font-weight: 500;
+
     
     &:before:hover{
       content: '';
@@ -110,13 +127,13 @@ justify-content: center; }
 }
 
 .bottom-btn{
-  display: inline-grid;
-  align-items: flex-end;
+  display: grid;
+ 
   align-items: center;
   justify-content: center;
-  margin-bottom: 0;
-  margin-top: 250px;
-  margin-left: 52px;
+ 
+  margin-top: 200px;
+ 
 }
 
 .btn{
@@ -134,7 +151,12 @@ justify-content: center; }
   margin-top: 20px;
 }
 
+.nav-icon{
+  margin-right: 5px;
+}
+
 //   model styles
+
 .btn-closer{
   padding: 15px 35px 15px 35px;
     border: none;
@@ -176,16 +198,17 @@ justify-content: center; }
 }
 
 
+
+// leave allocation
+
 #exampleModal{
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(2px);
 
 }
 
 .modal-footer{
   border: none !important;
 }
-
-// leave allocation
 
 
 span.box{
@@ -245,4 +268,88 @@ h3{
 
 .modal-title{
   font-weight: 900;
+}
+
+
+
+// ***********************************************************************************************************
+
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #f4f4f7;
+  padding: 29px 19px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+
+
+.home-section{
+  position: relative;
+  background: white;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+
+
+//model css
+.modal-content{
+  width: 130%;
+  top: 83px;
+  right: 63px;
+   border-radius: 25px;
+}
+
+.btn-closee{
+  width: 100%;
+  background-color: #f4f4f7;
+  border-radius: 40px;
+  height: 60px;
+}
+
+.btn-close{
+  background-color: #f4f4f7;
+    border-radius: 20px;
+
+}
+
+.modal-header{
+  padding: 26px;
+}
+
+.modal-backdrop.show{
+  opacity: 0 !important;
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+
+
+ 
 }

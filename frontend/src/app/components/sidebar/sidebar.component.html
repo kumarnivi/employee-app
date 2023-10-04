@@ -1,16 +1,16 @@
 
 
-<header class="header" role="banner" >
+<header class=" sidebar open" role="banner" >
  
     <h1 class="logo">
-      <a href="#"> <img src="../../../assets/Rootcode_io_home_page_9cb4b47132-removebg-preview.png" alt="logo-img" class="img-fluid" width="160" height="90"></a>
+      <a href="#"> <img src="../../../assets/Rootcode_io_home_page_9cb4b47132-removebg-preview.png" alt="logo-img" class="img-fluid nav-icon" width="160" height="90"></a>
     </h1>
     <div class="nav-wrap">
       <nav class="main-nav" role="navigation">
         <ul class="unstyled list-hover-slide">
-          <li> <a href="#" class="nav-link action"><img src="../../../assets/layout.png" alt="" height="16" width="16" class="img-fluid"> Dashboard</a></li>
-          <li> <a href="#"> <img src="../../../assets/stopwatch-1.png" alt="" height="16" width="16" class="img-fluid"> Leaves</a></li>
-          <li>  <a href="#"> <img src="../../../assets/settings-1.png" alt="" height="16" width="16" class="img-fluid"> Setting</a></li>    
+          <li> <a   [routerLink]="['/']"  [class.active-button]="activeButton === 1"  class="nav-link active"><img src="../../../assets/layout.png" alt="" height="16" width="16" class="img-fluid nav-icon"> Dashboard</a></li>
+          <li>  <a  [routerLink]="['/leaves']"  [ngClass]="{ 'active-link': activeLink === '/leaves' }" > <img src="../../../assets/stopwatch-1.png" alt="" height="16" width="16" class="img-fluid nav-icon" > Leaves</a></li>
+          <li>  <a  [routerLink]="['/']"  [ngClass]="{ 'active-link': activeLink === '/' }" > <img src="../../../assets/settings-1.png" alt="" height="16" width="16" class="img-fluid nav-icon"> Setting</a></li>    
         </ul>
 
        
@@ -23,8 +23,18 @@
     </div>
    
   </header>
+<section class="home-section">
+ <app-navbar></app-navbar>
+ <app-leave-allocation></app-leave-allocation>
+ <app-leaverequest></app-leaverequest>
+
+  </section>
 
 
+
+
+
+<!-- *************************************************************************************************************************************** -->
 
 
 <!-- Modal -->
@@ -157,11 +167,7 @@
 </div>
 
 
-
-
-
 <app-leave-model></app-leave-model>
 
 
 
-<!-- *************************************************************************************************************************************** -->

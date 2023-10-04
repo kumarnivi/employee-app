@@ -20,6 +20,7 @@ import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.compo
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddSubadminComponent } from './admin/add-subadmin/add-subadmin.component';
+import { LeavesComponent } from './components/leaves/leaves.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { AddSubadminComponent } from './admin/add-subadmin/add-subadmin.componen
     NavsideComponent,
     GraphComponent,
     AdminSidebarComponent,
-    AddSubadminComponent
+    AddSubadminComponent,
+    LeavesComponent
    
   ],
   imports: [

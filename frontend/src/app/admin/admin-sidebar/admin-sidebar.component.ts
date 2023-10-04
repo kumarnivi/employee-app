@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AdminSidebarComponent {
 
+  selectedNavItemText: string = 'Admin view';
+
+  updateSelectedNavItemText(text: string) {
+    this.selectedNavItemText = text;
+  }
+
 }

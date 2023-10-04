@@ -1,5 +1,7 @@
 @import "../../../styles.scss";
 
+
+
 table {
     width: 100%;
     border-collapse: collapse;
@@ -44,8 +46,7 @@ table {
 }
 
 .main {
-  justify-content: flex-end;
-  margin-right: 15px;
+ padding: 25px;
 }
 
 span {
@@ -132,4 +133,5 @@ td {
  h3{
   font-size: 18px;
   font-weight: 700;
+  padding-bottom: 10px;
  }

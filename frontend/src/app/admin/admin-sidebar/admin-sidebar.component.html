@@ -1,25 +1,66 @@
-<header class="header" role="banner" >
+<header class=" sidebar open" role="banner" id="admin" >
  
-    <h1 class="logo">
-      <a href="#"> <img src="../../../assets/Rootcode_io_home_page_9cb4b47132-removebg-preview.png" alt="logo-img" class="img-fluid" width="160" height="90"></a>
-    </h1>
-    <span class="status">provider code: <a href="#" style="color: black;">123456 </a></span>
-    <div class="nav-wrap">
-      <nav class="main-nav" role="navigation">
-        <ul class="unstyled list-hover-slide">
-          <li> <a href="#" class="nav-link action"><img src="../../../assets/layout.png" alt="" height="16" width="16" class="img-fluid"> Dashboard</a></li>
-          <li> <a href="#"> <img src="../../../assets/stopwatch-1.png" alt="" height="16" width="16" class="img-fluid"> Leaves</a></li>
-          <li>  <a href="#"> <img src="../../../assets/settings-1.png" alt="" height="16" width="16" class="img-fluid"> Setting</a></li>    
-        </ul>
+  <h1 class="logo">
+    <a href="#"> <img src="../../../assets/Rootcode_io_home_page_9cb4b47132-removebg-preview.png" alt="logo-img" class="img-fluid nav-icon" width="160" height="90"></a>
+  </h1>
+  <div class="nav-wrap">
+    <nav class="main-nav" role="navigation">
+      <ul class="unstyled list-hover-slide">
+        <li> <a   [routerLink]="['/']"    class="nav-link active"><img src="../../../assets/layout.png" alt="" height="16" width="16" class="img-fluid nav-icon"> Dashboard</a></li>
+        <li>  <a  [routerLink]="['/leaves']" > <img src="../../../assets/stopwatch-1.png" alt="" height="16" width="16" class="img-fluid nav-icon" > Leaves</a></li>
+        <li>  <a  [routerLink]="['/']"  > <img src="../../../assets/settings-1.png" alt="" height="16" width="16" class="img-fluid nav-icon"> Setting</a></li>    
+      </ul>
 
-       
-      </nav>
-      <div class="bottom-btn">
-        <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Visit MyLeave <img src="../../../assets/right-arrow (1).png" alt="" height="16" width="16" style="padding-left: 5px;"></button>
-        <a class="bottom-text" href="#">Get help</a>
-      </div>
-      
+     
+    </nav> 
+    <div class="bottom-btn">
+      <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Apply leave <img src="../../../assets/right-arrow (1).png" alt="" height="16" width="16" style="padding-left: 5px;"></button>
+      <a class="bottom-text" href="#">Get help</a>
     </div>
-   
-  </header>
+    
+  </div>
+ 
+</header>
+<section class="home-section">
+ 
 
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"></a>
+    
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item bell">
+            <a class="nav-link active" aria-current="page" href="#" style="padding-left: 0; margin-right: 10px;"><img src="../../../assets/bell.png" alt="" width="20" height="20" class="img-fluid"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" ><img src="../../../assets/woman-128.png" alt="user" width="35" height="35" class="img-fluid"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active"  style="font-weight: 600;">Lesil Alexander  <p style="font-weight: 400;">UX Designer</p> </a>
+            
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 13px;">
+              {{ selectedNavItemText }}
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" (click)="updateSelectedNavItemText('Admin view')" [routerLink]="'/admin'">Admin view</a></li>
+              <li><a class="dropdown-item" (click)="updateSelectedNavItemText('Employee view')" [routerLink]="'/'">Employee view</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+
+  <app-graph></app-graph>
+  
+  <app-add-subadmin></app-add-subadmin>
+  
+</section>
