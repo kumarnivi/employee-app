@@ -21,7 +21,48 @@
     ngb-datepicker {
         border: none;
         border-radius: 0.25rem;
-        display: grid;
-        justify-content: space-around;
-      
+        // display: grid;
+        // justify-content: space-around;
+      width: 100%;
         }
+
+
+
+    /* Apply custom styles to the NgbDatepicker component */
+::ng-deep .ngb-dp-header {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  ::ng-deep .ngb-dp-day, ::ng-deep .ngb-dp-month, ::ng-deep .ngb-dp-year {
+    color: #333;
+    display: block;
+  }
+  
+
+
+ 
+
+  /* Customize the selected date */
+  ::ng-deep .ngb-dp-day.is-selected {
+    background-color: red;
+    color: white;
+  }
+  
+  /* Customize the hovered date */
+  ::ng-deep .ngb-dp-day.is-hovered {
+    background-color: #f0f0f0;
+  }
+  
+  /* Customize the disabled days */
+  ::ng-deep .ngb-dp-day.is-disabled {
+    color: #ccc;
+  }
+  
+  /* Customize the calendar navigation buttons */
+  ::ng-deep .ngb-dp-arrow-btn {
+    color: red;
+    position: absolute
+  }
+  
