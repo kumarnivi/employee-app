@@ -170,9 +170,10 @@ position: fixed;
 
 .modal-content{
   width: 708px;
-  margin-top: 165px;
+  margin-top: 99px;
   border: none;
 }
+
 
 .btn-position{
   padding: 5px 15px 5px 15px;
@@ -271,7 +272,6 @@ h3{
 }
 
 
-
 // ***********************************************************************************************************
 
 
@@ -307,34 +307,6 @@ h3{
 }
 
 
-//model css
-.modal-content{
-  width: 130%;
-  top: 83px;
-  right: 63px;
-   border-radius: 25px;
-}
-
-.btn-closee{
-  width: 100%;
-  background-color: #f4f4f7;
-  border-radius: 40px;
-  height: 60px;
-}
-
-.btn-close{
-  background-color: #f4f4f7;
-    border-radius: 20px;
-
-}
-
-.modal-header{
-  padding: 26px;
-}
-
-.modal-backdrop.show{
-  opacity: 0 !important;
-}
 
 
 
