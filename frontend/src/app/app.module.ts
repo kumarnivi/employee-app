@@ -13,6 +13,11 @@ import { DatePickerComponent } from './components/date-picker/date-picker.compon
 import { CalendarModule,DateAdapter } from 'angular-calendar'; 
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { LeaveRequestConfirmModalComponent } from './components/leave-request-confirm-modal/leave-request-confirm-modal.component';
+import { NavsideComponent } from './admin/navside/navside.component';
+import { GraphComponent } from './admin/graph/graph.component';
+import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
+// import { CanvasJSAngularStockChartsModule } from '@canvasjs/angular-stockcharts';
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 
 @NgModule({
   declarations: [
@@ -24,7 +29,10 @@ import { LeaveRequestConfirmModalComponent } from './components/leave-request-co
     LeaverequestComponent,
     LeaveModelComponent,
     DatePickerComponent,
-    LeaveRequestConfirmModalComponent
+    LeaveRequestConfirmModalComponent,
+    NavsideComponent,
+    GraphComponent,
+    AdminSidebarComponent
    
   ],
   imports: [
@@ -34,7 +42,9 @@ import { LeaveRequestConfirmModalComponent } from './components/leave-request-co
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,
-    })
+    }),
+    CanvasJSAngularChartsModule
+
     
   ],
   providers: [],
