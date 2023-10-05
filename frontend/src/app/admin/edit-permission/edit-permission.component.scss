@@ -4,6 +4,12 @@
     margin-left: 601px;
 }
 
+.modal-content {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
+    border: none;
+  }
+  
+
 .btn-add{
     padding: 15px 35px 15px 35px;
     border: none;
@@ -47,6 +53,7 @@ select#dropdownField {
    
 }
 
+
 label {
     font-size: 15px;
     font-weight: 500;
@@ -64,3 +71,10 @@ label {
 .bi-check-lg{
     margin-left: 5px;
 }
+
+h1#exampleModalLabel {
+    font-weight: 600;
+}
+
+
+
