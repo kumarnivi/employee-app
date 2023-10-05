@@ -9,10 +9,10 @@
 .participate-card{
     position: relative;
     box-shadow: 0 0 40px 10px #adadad2d;
-    padding: 30px;
+    padding: 10px 20px 20px 20px;
      border-radius: 20px;
     max-width: 250px;
-    margin: auto;
+    width: 200px;
     background: #f4f4f7;
     // background-image: url('../../../assets/woman-128.png');
 }
@@ -22,8 +22,16 @@
     margin-bottom: 17px;
     background-color:  #016fff1c;
    
+
+   
 }
 
+
+.col-3 {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+}
 
 .edit-icon{
   display: grid;
@@ -41,10 +49,7 @@
    
 }
 
-.row{
-    align-items: center;
-    justify-content: center;
-}
+
 
 .btn-participate {
     border: none;
@@ -59,6 +64,31 @@ h5{
     font-size: 18px;
     font-weight: 500;
 }
+
+
+.admin-add-btn{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: #f4f4f7;
+    display: grid;
+    align-items: center;
+}
+
+.sub-admin {
+    display: flex;
+    padding-left: 62px;
+    padding-top: 38px;
+}
+
+
+
+
+
+
+
+
 @media (max-width:866px) {
 
     .participate_img{
