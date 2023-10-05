@@ -23,7 +23,9 @@ import { AddSubadminComponent } from './admin/add-subadmin/add-subadmin.componen
 import { LeavesComponent } from './components/leaves/leaves.component';
 import { EditPermissionComponent } from './admin/edit-permission/edit-permission.component';
 import { ChangedPermissionComponent } from './admin/changed-permission/changed-permission.component';
-
+import { ManageTableComponent } from './manager/manage-table/manage-table.component';
+import { MangerViewComponent } from './manager/manager-view/manager-view.component';
+import { TableViewComponent } from './manager/table-view/table-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +43,10 @@ import { ChangedPermissionComponent } from './admin/changed-permission/changed-p
     AddSubadminComponent,
     LeavesComponent,
     EditPermissionComponent,
-    ChangedPermissionComponent
+    ChangedPermissionComponent,
+    ManageTableComponent,
+    MangerViewComponent,
+    TableViewComponent
    
   ],
   imports: [

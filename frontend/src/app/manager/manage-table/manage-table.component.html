@@ -1,0 +1,104 @@
+<div class="container pt-3">
+    <div class="row main">
+      <div class="">
+        <h3>Leave requests</h3>
+        <div class="leave-container">
+          <div class="row main-row">
+            <div>
+              <select
+                [(ngModel)]="selectedType"
+                style="border: none; background: transparent"
+              >
+                <option value="Sort by" selected>Sort by</option>
+                <option value="Casual">Casual</option>
+                <option value="Annual">Annual</option>
+                <option value="Medical">Medical</option>
+              </select>
+              <div class="filter">
+                <button class="btn-filter" (click)="filterDataByType()">
+                  Filter <img src="../../../assets/setting.png" alt="filter" />
+                </button>
+              </div>
+            </div>
+          </div>
+  
+          <table>
+            <!-- Table headers -->
+            <thead>
+              <tr>
+                <th>NAME</th>
+                <th>DURATION</th>
+                <th class="text-center">TYPE</th>
+                <th class="text-end">STATUS</th>
+              </tr>
+            </thead>
+  
+            <tbody>
+              <!-- Use *ngFor to loop through data based on current page and itemsPerPage -->
+              <tr
+                *ngFor="
+                  let item of data.slice(
+                    (currentPage - 1) * itemsPerPage,
+                    currentPage * itemsPerPage
+                  )
+                "
+                data-bs-toggle="modal" data-bs-target="#exampleModal"
+              >
+                <td> <img src={{item.dot}} alt="img" width="30" height="30"> <span class="status">{{item.name}}</span></td>
+                <td>{{ item.duration }} <span class="status">{{item.day}}</span></td>
+                <td class="td-type">
+                  <span class="status">
+                    <img src="{{ item.src }}" alt="img-leav" width="16" height="16" /> {{ item.type }}</span
+                  >
+                </td>
+                <td class="td-status">
+                  <span class="status">
+                    <span
+                      class="status-indicator"
+                      [ngClass]="{
+                        pending: item.status === 'Pending',
+                        denied: item.status === 'Denied',
+                        approved: item.status === 'Approved'
+                      }"
+                    >
+                      {{ item.round }}
+                    </span>
+                    {{ item.status }}</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
+  
+          <!-- pagination -->
+  
+          <nav aria-label="Page navigation">
+            <ul class="pagination">
+              <li class="page-item" [class.disabled]="currentPage === 1">
+                <a class="page-link" (click)="prevPage()" aria-label="Previous">
+                  <span class="next" aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li
+                class="page-item"
+                *ngFor="let page of visiblePages"
+                [class.active]="currentPage === page"
+              >
+                <a class="page-link" (click)="setPage(page)">{{ page }}</a>
+              </li>
+              <li class="page-item" [class.disabled]="currentPage === totalPages">
+                <a class="page-link" (click)="nextPage()" aria-label="Next">
+                  <span class="next" aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
