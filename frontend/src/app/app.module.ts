@@ -21,6 +21,8 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddSubadminComponent } from './admin/add-subadmin/add-subadmin.component';
 import { LeavesComponent } from './components/leaves/leaves.component';
+import { EditPermissionComponent } from './admin/edit-permission/edit-permission.component';
+import { ChangedPermissionComponent } from './admin/changed-permission/changed-permission.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { LeavesComponent } from './components/leaves/leaves.component';
     GraphComponent,
     AdminSidebarComponent,
     AddSubadminComponent,
-    LeavesComponent
+    LeavesComponent,
+    EditPermissionComponent,
+    ChangedPermissionComponent
    
   ],
   imports: [

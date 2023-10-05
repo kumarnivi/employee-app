@@ -1,0 +1,66 @@
+
+.modal-dialog {
+    margin-top: 250px;
+    margin-left: 601px;
+}
+
+.btn-add{
+    padding: 15px 35px 15px 35px;
+    border: none;
+    border-radius: 40px;
+    background-color: #83C9B6;
+    color: black;
+    width: 100%;
+    font-weight: 500;
+}
+
+
+
+div#exampleModal {
+    backdrop-filter: blur(2px);
+}
+
+h3{
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.admin-one{
+   margin-top: 20px;
+}
+
+.admin-name{
+    font-size: 15px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+select#dropdownField {
+    border: none;
+    background: #f4f4f7;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-weight: 400;
+   
+}
+
+label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 15px;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+.modal-footer {
+    border: none;
+}
+
+.bi-check-lg{
+    margin-left: 5px;
+}
