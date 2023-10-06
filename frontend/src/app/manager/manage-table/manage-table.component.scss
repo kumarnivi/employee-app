@@ -12,8 +12,9 @@ table {
   thead th {
     padding:5px 20px 5px 20px; 
     text-align: left;
-    border-bottom: 2px solid #ccc; 
-    border-top: 2px solid #ccc;
+    border-bottom: 1px solid #ccc; 
+    border-top: 1px solid #ccc;
+    margin-top: 2px;
     color: gray;
     font-weight: 300;
     font-size: 15px;
@@ -73,9 +74,16 @@ th {
 }
 
 tr {
-    border-bottom: 1px solid rgba(128, 128, 128, 0.326);
+    border-bottom: 1px solid rgba(128, 128, 128, 0.174);
   padding: 20px;
   background-color: #FBFBFA;
+}
+
+
+
+tr:hover{
+
+  border: 2px solid #D7C2EE !important;
 }
 
 td {

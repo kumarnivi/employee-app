@@ -23,7 +23,7 @@ h1{
   
 
 .modal-content{
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adjust the values as needed */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     border: none;
     width: 599px;
     max-height: 100vh;
@@ -34,6 +34,16 @@ h1{
     border: none;
     border-radius: 25px;
     padding: 5px;
+  }
+  
+
+  .modal-header {
+    border-bottom: 2px solid #80808036;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 8px;
+    padding-left: 0;
+    padding-bottom: 8;
   }
   
 

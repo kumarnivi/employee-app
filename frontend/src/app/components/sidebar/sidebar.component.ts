@@ -8,13 +8,30 @@ import { filter } from 'rxjs/operators';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent  {
+  
 
   activeLink: string = '/';
 
   activeButton: number | null = 1;
 
+  isSidebarOpen = true;
+  shouldDisplayContent = false; 
+  marginRightValue = '250px'; 
+  translateXValue = '0'; 
+  // contentWidth = '';
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+    this.shouldDisplayContent = !this.isSidebarOpen; 
+  
+    
+    this.translateXValue = this.isSidebarOpen ? '0' : '-100px';
+    //  this.contentWidth =  this.isSidebarOpen ? '' : '100%';
+  }
+
   showContentt(buttonNumber: number) {
     this.activeButton = buttonNumber;
+
   }
 
 

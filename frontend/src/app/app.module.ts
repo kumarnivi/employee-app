@@ -28,6 +28,7 @@ import { MangerViewComponent } from './manager/manager-view/manager-view.compone
 import { TableViewComponent } from './manager/table-view/table-view.component';
 import { LineChartComponent } from './admin/line-chart/line-chart.component';
 import { ApprovedViewComponent } from './manager/approved-view/approved-view.component';
+import { TeamAvailableComponent } from './manager/team-available/team-available.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,7 +51,8 @@ import { ApprovedViewComponent } from './manager/approved-view/approved-view.com
     MangerViewComponent,
     TableViewComponent,
     LineChartComponent,
-    ApprovedViewComponent
+    ApprovedViewComponent,
+    TeamAvailableComponent
    
   ],
   imports: [

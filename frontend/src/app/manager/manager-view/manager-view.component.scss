@@ -220,7 +220,24 @@ p{
 }
 
 .dropdown-item:hover{
-  background-color: #83c9b67a;
-  border-radius: 5px;
+  background-color: #63a5fc6d;
+  border-radius: 20px;
   color: black;
+}
+
+
+
+
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 46px;
+    border-radius: 20px;
+    border: none;
+    background: #f4f4f7;
+}
+
+@media (min-width: 992px)
+{
+
 }

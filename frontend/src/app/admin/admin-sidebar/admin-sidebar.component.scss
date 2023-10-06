@@ -219,11 +219,23 @@ p{
   margin: 0;
 }
 
+
+
+  
 .dropdown-item:hover{
-  background-color: #83c9b67a;
-  border-radius: 5px;
+  background-color: #83C9B6;
+  border-radius: 20px;
   color: black;
 }
 
 
-  
+
+
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 46px;
+    border-radius: 20px;
+    border: none;
+    background: #f4f4f7;
+}
