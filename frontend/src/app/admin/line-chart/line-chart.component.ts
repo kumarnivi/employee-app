@@ -43,7 +43,7 @@ export class LineChartComponent {
         min: 0,
         title: undefined,
         tickInterval: 10, 
-        max: 80, // Set the maximum value on the y-axis
+        max: 60, // Set the maximum value on the y-axis
       },
       xAxis: {
         type: 'category',

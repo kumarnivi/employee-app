@@ -27,6 +27,7 @@ import { ManageTableComponent } from './manager/manage-table/manage-table.compon
 import { MangerViewComponent } from './manager/manager-view/manager-view.component';
 import { TableViewComponent } from './manager/table-view/table-view.component';
 import { LineChartComponent } from './admin/line-chart/line-chart.component';
+import { ApprovedViewComponent } from './manager/approved-view/approved-view.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +49,8 @@ import { LineChartComponent } from './admin/line-chart/line-chart.component';
     ManageTableComponent,
     MangerViewComponent,
     TableViewComponent,
-    LineChartComponent
+    LineChartComponent,
+    ApprovedViewComponent
    
   ],
   imports: [
