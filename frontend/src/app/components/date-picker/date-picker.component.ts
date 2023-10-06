@@ -2,24 +2,37 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { NgbDate, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
+import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-date-picker',
+  providers: [DatePipe], 
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './date-picker.component.html',
   styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent {
 
+
   hoveredDate: NgbDate | null = null;
 
 	fromDate: NgbDate;
 	toDate: NgbDate | null = null;
+	selectedMonthYear: string = '';
 
-	constructor(calendar: NgbCalendar) {
+	constructor(calendar: NgbCalendar,  private datePipe: DatePipe) {
 		this.fromDate = calendar.getToday();
 		this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
+		this.updateSelectedMonthYear(this.fromDate);
 	}
+
+	ngbDateToDate(ngbDate: NgbDate | null): Date | null {
+		if (ngbDate) {
+		  return new Date(ngbDate.year, ngbDate.month - 1, ngbDate.day);
+		}
+		return null;
+	  }
 
 	onDateSelection(date: NgbDate) {
 		if (!this.fromDate && !this.toDate) {
@@ -30,7 +43,14 @@ export class DatePickerComponent {
 			this.toDate = null;
 			this.fromDate = date;
 		}
+		this.updateSelectedMonthYear(date);
 	}
+
+	updateSelectedMonthYear(date: NgbDate) {
+		const selectedDate = new Date(date.year, date.month - 1);
+		this.selectedMonthYear = this.datePipe.transform(selectedDate, 'MMMM yyyy') ?? 'N/A'; // Provide a default value like 'N/A'
+	  }
+	
 
 	isHovered(date: NgbDate) {
 		return (
@@ -51,4 +71,6 @@ export class DatePickerComponent {
 		);
 	}
   
+
+
 }

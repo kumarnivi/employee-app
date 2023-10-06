@@ -10,6 +10,12 @@ h3{
   textarea.form-control {
     width: 466px;
     margin-left: 9px;
+    
+}
+
+.form-control:focus {
+ outline: none;
+ 
 }
 
 .row-optional {
@@ -27,7 +33,7 @@ h3{
   border-radius: 25px;
   width: 977px;
     height: 708px;
-    max-height: 100vh;
+    max-height: 100%;
     border: none;
   }
 

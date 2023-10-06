@@ -8,25 +8,26 @@
     width: 2rem;
 }
 .custom-day.focused {
-    background-color: #e6e6e6;
+    background-color: #FAF5FE;
 }
 .custom-day.range,
 .custom-day:hover {
-    background-color: purple;
-    color: white;
+    background-color: #FAF5FE;
+    color: purple;
     border-radius: 50%;
 }
 .custom-day.faded {
-    background-color: rgba(128, 0, 128, 0.237);
+    background-color: #FAF5FE;
 }
 
 
     ngb-datepicker {
         border: none;
-        border-radius: 0.25rem;
+        border-radius: 10px;
         display: grid;
         // justify-content: space-around;
       width: 100%;
+      background-color: #FAF5FE;
         }
 
         .ngb-dp-header {
@@ -37,6 +38,11 @@
             color: purple;
           }
 
+
+          .ngb-dp-week.ngb-dp-weekdays {
+            display: flex;
+            justify-content: space-around;
+        }
 
 
     /* Apply custom styles to the NgbDatepicker component */
@@ -58,25 +64,16 @@
 
  
 
-//   /* Customize the selected date */
-//   ::ng-deep .ngb-dp-day.is-selected {
-//     background-color: red;
-//     color: white;
-//   }
-  
-//   /* Customize the hovered date */
-//   ::ng-deep .ngb-dp-day.is-hovered {
-//     background-color: #f0f0f0;
-//   }
-  
-//   /* Customize the disabled days */
-//   ::ng-deep .ngb-dp-day.is-disabled {
-//     color: #ccc;
-//   }
-  
-//   /* Customize the calendar navigation buttons */
-//   ::ng-deep .ngb-dp-arrow-btn {
-//     color: red;
-//     position: absolute
-//   }
-  
+.main-date{
+  display: flex;
+  justify-content: space-between;
+}
+
+.date-pipe[_ngcontent-ng-c1773948178] {
+  background-color: #FAF5FE;
+  border-radius: 10px;
+  border: none;
+  margin-left: 5px;
+  padding: 10px;
+  text-align: center;
+}
