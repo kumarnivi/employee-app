@@ -26,6 +26,7 @@ import { ChangedPermissionComponent } from './admin/changed-permission/changed-p
 import { ManageTableComponent } from './manager/manage-table/manage-table.component';
 import { MangerViewComponent } from './manager/manager-view/manager-view.component';
 import { TableViewComponent } from './manager/table-view/table-view.component';
+import { LineChartComponent } from './admin/line-chart/line-chart.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,7 +47,8 @@ import { TableViewComponent } from './manager/table-view/table-view.component';
     ChangedPermissionComponent,
     ManageTableComponent,
     MangerViewComponent,
-    TableViewComponent
+    TableViewComponent,
+    LineChartComponent
    
   ],
   imports: [

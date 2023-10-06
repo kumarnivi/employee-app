@@ -46,7 +46,7 @@ position: fixed;
   
   a{
     display: block;
-    padding: 1em 0;
+   
     text-decoration: none;
     transition: .15s linear color;
     
@@ -61,7 +61,9 @@ position: fixed;
 
 // MAIN NAV
 .main-nav{
- 
+
+    padding-top: 40px;
+
   
   a{
     padding: 1.1em 0;
@@ -167,13 +169,26 @@ position: fixed;
     font-weight: 500;
 }
 
+.modal-header {
+  border-bottom: 2px solid #80808036;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-right: 8px;
+  padding-left: 0;
+  padding-bottom: 8;
+}
 
 .modal-content{
-  width: 708px;
-  margin-top: 99px;
+  width: 735px;
+  border-radius: 25px;
+  top: 121px;
+  right: 63px;
   border: none;
 }
 
+.modal-body {
+  height: 316px;
+}
 
 .btn-position{
   padding: 5px 15px 5px 15px;
@@ -190,7 +205,7 @@ position: fixed;
 }
 .row.grid-box{
   align-items: center;
-  justify-content: center;
+   justify-content: space-evenly;
 }
 
 .col:hover{
@@ -209,6 +224,11 @@ position: fixed;
 
 .modal-footer{
   border: none !important;
+  padding-bottom: 20px;
+}
+
+.row.main {
+  padding: 10px;
 }
 
 
@@ -221,8 +241,7 @@ span.box{
 
 .col-sm-3{
   display: flex;
-  align-items: normal;
-  justify-content: center;
+  justify-content: flex-end;
 }
 
 .col{
@@ -257,18 +276,18 @@ span.d {
 
 h3{
   font-weight: 900;
-  font-size: 18px;
+  font-size: 23px;
 }
-
 .btn-close{
-  margin-right: 10px;
-  background-color: #f4f4f7;
-  padding: 20px;
-  border-radius: 50%;
-}
 
+  background-color: #E5E4E7;
+  padding: 10px;
+  border-radius: 50%;
+ 
+}
 .modal-title{
   font-weight: 900;
+ 
 }
 
 

@@ -17,11 +17,20 @@ h3{
 
 .modal-content{
     width: 878px;
-    height: 448px;
+    height: 467px;
     max-height: 100vh;
     border: none;
+    border-radius: 25px;
   }
   
+  .modal-header {
+    border-bottom: 2px solid #80808036;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-right: 8px;
+    padding-left: 0;
+    padding-bottom: 8;
+  }
 
   #exampleModal3{
     backdrop-filter: blur(1px);
@@ -30,7 +39,7 @@ h3{
 
 .btn-close{
     margin-right: 10px;
-    background-color: #f4f4f7;
+    background-color: #E5E4E7;
     padding: 10px;
     border-radius: 50%;
     
@@ -78,6 +87,7 @@ span {
 
   .modal-footer{
     border: none !important;
+    padding-bottom: 20px;
   }
 
 
