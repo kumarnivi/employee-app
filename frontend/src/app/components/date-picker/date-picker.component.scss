@@ -12,7 +12,7 @@
 }
 .custom-day.range,
 .custom-day:hover {
-    background-color: #FAF5FE;
+    background-color: #e1c6f8;
     color: purple;
     border-radius: 50%;
 }
@@ -20,6 +20,12 @@
     background-color: #FAF5FE;
 }
 
+
+.ngb-dp-weekday {
+  font-size: 16px !important;
+  font-weight: bold !important;
+  color: red !important;
+}
 
     ngb-datepicker {
         border: none;
@@ -69,7 +75,7 @@
   justify-content: space-between;
 }
 
-.date-pipe[_ngcontent-ng-c1773948178] {
+.date-pipe{
   background-color: #FAF5FE;
   border-radius: 10px;
   border: none;

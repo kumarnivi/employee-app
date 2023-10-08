@@ -18,7 +18,7 @@ export class SidebarComponent  {
   shouldDisplayContent = false; 
   marginRightValue = '250px'; 
   translateXValue = '0'; 
-  // contentWidth = '';
+ 
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
@@ -26,15 +26,12 @@ export class SidebarComponent  {
   
     
     this.translateXValue = this.isSidebarOpen ? '0' : '-100px';
-    //  this.contentWidth =  this.isSidebarOpen ? '' : '100%';
   }
 
   showContentt(buttonNumber: number) {
     this.activeButton = buttonNumber;
 
   }
-
-
 
   openModal(){
     const modelDiv =   document.getElementById('myModel');

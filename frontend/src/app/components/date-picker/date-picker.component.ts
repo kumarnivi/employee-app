@@ -20,6 +20,7 @@ export class DatePickerComponent {
 	fromDate: NgbDate;
 	toDate: NgbDate | null = null;
 	selectedMonthYear: string = '';
+	selectedDate: NgbDate | null = null;
 
 	constructor(calendar: NgbCalendar,  private datePipe: DatePipe) {
 		this.fromDate = calendar.getToday();
@@ -43,14 +44,17 @@ export class DatePickerComponent {
 			this.toDate = null;
 			this.fromDate = date;
 		}
+
+		this.selectedDate = date;
 		this.updateSelectedMonthYear(date);
 	}
 
-	updateSelectedMonthYear(date: NgbDate) {
-		const selectedDate = new Date(date.year, date.month - 1);
-		this.selectedMonthYear = this.datePipe.transform(selectedDate, 'MMMM yyyy') ?? 'N/A'; // Provide a default value like 'N/A'
-	  }
 	
+	  updateSelectedMonthYear(date: NgbDate) {
+		const selectedDate = new Date(date.year, date.month - 1);
+		this.selectedMonthYear = this.datePipe.transform(selectedDate, 'MMMM yyyy') ?? 'N/A';
+	  }
+
 
 	isHovered(date: NgbDate) {
 		return (
