@@ -2,6 +2,7 @@
  
   <h1 class="logo" *ngIf="isSidebarOpen">
     <a href="#"> <img src="../../../assets/Rootcode_io_home_page_9cb4b47132-removebg-preview.png" alt="logo-img" class="img-fluid nav-icon" width="160" height="90"></a>
+   
   </h1>
   <div class="nav-wrap" *ngIf="isSidebarOpen">
     <nav class="main-nav" role="navigation">
@@ -14,7 +15,7 @@
      
     </nav>
     <div class="bottom-btn" >
-      <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Apply leave <img src="../../../assets/right-arrow (1).png" alt="" height="16" width="16" style="padding-left: 5px;"></button>
+      <button class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">Visit MyLeave <img src="../../../assets/right-arrow (1).png" alt="" height="16" width="16" style="padding-left: 5px;"></button>
       <a class="bottom-text" href="#">Get help</a>
     </div>
     
@@ -28,6 +29,7 @@
 <div class="nav-wrap" >
   <nav class="main-nav1" role="navigation">
     <ul class="unstyled list-hover-slide">
+      <li> <a ><img src="../../../assets/logo.png" alt="logo" class="img-fluid nav-icon1" width="20" height="20"></a> </li>
       <li > <a [routerLink]="['/']"  [class.active-button]="activeButton === 1"  class="nav-link active"><img src="../../../assets/dashboard-1.png"  alt="" height="16" width="16" class="img-fluid nav-icon1"> </a></li>
       <li >  <a  [routerLink]="['/leaves']"  [ngClass]="{ 'active-link': activeLink === '/leaves' }" > <img src="../../../assets/stopwatch-1.png" alt="" height="16" width="16" class="img-fluid nav-icon1" > </a></li>
       <li >  <a  [routerLink]="['/']"  [ngClass]="{ 'active-link': activeLink === '/' }" > <img src="../../../assets/settings-1.png" alt="" height="16" width="16" class="img-fluid nav-icon1"> </a></li>    

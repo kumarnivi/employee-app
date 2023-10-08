@@ -246,7 +246,7 @@ p{
 // 2nd side bar ******************************************************//
 
 .sidebar.shrink {
-  transform: translateX(-180px); /* Slide the sidebar off-screen when shrunk */
+  transform: translateX(-180px);
 }
 
 .toggler div {
@@ -256,11 +256,10 @@ p{
 }
 
 .toggler img {
-  width: 32px; /* Adjust the size of the toggle icon */
+  width: 32px; 
   height: 32px;
 }
 
-/* Add a transition effect for smooth shrinking/expanding */
 div.toggler{
   transition: all 0.3s ease;
 }
@@ -279,7 +278,7 @@ div.toggler {
 // ********************************
 
 .home-section {
-  transition: transform 0.3s ease; /* Adjust the duration and easing as needed */
+  transition: transform 0.3s ease; 
 }
 
 
@@ -308,5 +307,6 @@ div.toggle1 {
 
 img.img-fluid.nav-icon1 {
   padding-top: 17px;
+  margin-bottom: 22px;
 }
 

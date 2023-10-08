@@ -49,3 +49,34 @@ h3{
     font-size: 18px;
     padding-bottom: 10px;
 }
+
+
+// ************************************************************
+@media (max-width: 576px) {
+    /* CSS for small screens (e.g., mobile) */
+    .box-container {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    .main{
+        padding: 0;
+        width: 100vw;
+        height: 100%;
+      
+    }
+   .leave-row{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+   }
+
+@media (min-width: 577px) and (max-width: 991px) {
+    /* CSS for medium screens (e.g., tablets) */
+    .box-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+}
