@@ -66,186 +66,165 @@ export class ManageTableComponent implements OnInit {
         dot:'	../../../assets/woman-128.png',
         name: 'Guy Swaking'
       },
+     
       {
         duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        day: '2 Day',
-        dot:'	../../../assets/woman-128.png'
+        type: 'Annual',
+        status: 'Denied',
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Jenny Willson'
       },
+
       {
         duration: '25th Feb to 28th',
-        type: 'Medical',
+        type: 'Annual',
         status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'	../../../assets/woman-128.png'
-      },
-       {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'	../../../assets/woman-128.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'	../../../assets/woman-128.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'	../../../assets/woman-128.png'
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Lesile Alexander '
       },
       {
         duration: '21st Jan to 24th',
         type: 'Casual',
         status: 'Pending',
         src:'../../../assets/schedule.png',
-        dot:'	../../../assets/woman-128.png'
+        day: '1 Day',
+        dot: '../../../assets/woman-128.png',
+        name: 'Cameron Williomson',
+        round: ''
       },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png',
-        dot:'	../../../assets/woman-128.png'
-      },
-
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png',
-        dot:'	../../../assets/woman-128.png'
-
-      },
+     
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      }, {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/medical.png',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
       },
       {
         duration: '21st Jan to 24th',
         type: 'Casual',
         status: 'Pending',
-        src:'../../../assets/schedule.png'
+        src:'../../../assets/schedule.png',
+        day: '1 Day',
+        dot: '../../../assets/woman-128.png',
+        name: 'Cameron Williomson',
+        round: ''
       },
+     
+
       {
         duration: '25th Feb to 28th',
         type: 'Annual',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Lesile Alexander '
+      },
+      {
+        duration: '25th Feb to 28th',
+        type: 'Medical',
+        status: 'Approved',
+        src:'../../../assets/medical.png',
+        day: '2 Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
+      },
+      {
+        duration: '25th Feb to 28th',
+        type: 'Medical',
+        status: 'Approved',
+        src:'../../../assets/medical.png',
+        day: '2 Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
+      },
+      {
+        duration: '25th Feb to 28th',
+        type: 'Medical',
+        status: 'Approved',
+        src:'../../../assets/medical.png',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
+      },
+      {
+        duration: '21st Jan to 24th',
+        type: 'Casual',
+        status: 'Pending',
+        src:'../../../assets/schedule.png',
+        day: '1 Day',
+        dot: '../../../assets/woman-128.png',
+        name: 'Cameron Williomson',
+        round: ''
+      },
+      {
+        duration: '25th Feb to 28th',
+        type: 'Annual',
+        status: 'Denied',
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Jenny Willson'
       },
 
       {
         duration: '25th Feb to 28th',
         type: 'Annual',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
-
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Lesile Alexander '
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/medical.png',
+        day: '2 Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/medical.png',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/medical.png',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Guy Swaking'
       },
       {
         duration: '25th Feb to 28th',
-        type: 'Medical',
+        type: 'Annual',
         status: 'Approved',
-        src:'../../../assets/medical.png'
-      }, {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Lesile Alexander '
       },
       {
         duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
+        type: 'Annual',
+        status: 'Denied',
+        src:'../../../assets/coconut-tree.png',
+        day: 'Half Day',
+        dot:'	../../../assets/woman-128.png',
+        name: 'Jenny Willson'
       },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      // Add more data items as needed
+      
     ];
 
     this.originalData = [...this.data];
@@ -259,17 +238,15 @@ export class ManageTableComponent implements OnInit {
 
  
   filterDataByType(): void {
-    if (this.selectedType === 'All') {
-      // If "All Types" is selected, show all data
+    if (this.selectedType === 'All') {    
       this.data = [...this.originalData];
-    } else if (this.selectedType) {
-      // Filter data based on the selected type
+    } else if (this.selectedType) {    
       this.data = this.originalData.filter(item => item.type === this.selectedType);
-    } else {
-      // If no type is selected, reset the data to the original data
+    } else { 
       this.data = [...this.originalData];
     }
   
+
     // Recalculate the total number of pages and update the pages array
     this.totalPages = Math.ceil(this.data.length / this.itemsPerPage);
     this.updatePages();
@@ -302,7 +279,7 @@ export class ManageTableComponent implements OnInit {
     }
   }
 
-  // Function to set the current page
+
   setPage(page: number): void {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
@@ -310,7 +287,7 @@ export class ManageTableComponent implements OnInit {
     }
   }
 
-  // Function to navigate to the previous page
+ 
   prevPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
@@ -318,7 +295,7 @@ export class ManageTableComponent implements OnInit {
     }
   }
 
-  // Function to navigate to the next page
+ 
   nextPage(): void {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
