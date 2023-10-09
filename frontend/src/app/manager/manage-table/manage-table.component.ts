@@ -259,7 +259,11 @@ export class ManageTableComponent implements OnInit {
 
  
   filterDataByType(): void {
-    if (this.selectedType) {
+    if (this.selectedType === 'All') {
+      // If "All Types" is selected, show all data
+      this.data = [...this.originalData];
+    } else if (this.selectedType) {
+      // Filter data based on the selected type
       this.data = this.originalData.filter(item => item.type === this.selectedType);
     } else {
       // If no type is selected, reset the data to the original data

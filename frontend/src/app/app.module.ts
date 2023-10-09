@@ -29,6 +29,7 @@ import { TableViewComponent } from './manager/table-view/table-view.component';
 import { LineChartComponent } from './admin/line-chart/line-chart.component';
 import { ApprovedViewComponent } from './manager/approved-view/approved-view.component';
 import { TeamAvailableComponent } from './manager/team-available/team-available.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import { TeamAvailableComponent } from './manager/team-available/team-available.
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgbModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory,

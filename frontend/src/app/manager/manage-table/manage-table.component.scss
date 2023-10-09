@@ -81,10 +81,11 @@ tr {
 
 
 
-tr:hover{
 
+tbody tr:hover{
+  border-bottom:  transparent ;
   border: 1px solid #D7C2EE !important;
-  border-bottom: none;
+ 
 }
 
 td {

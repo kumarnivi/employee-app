@@ -7,11 +7,14 @@
  
 }
 
+
 .graph-main {
   padding: 35px 80px 10px 80px;
 }
 
 
+
+// *******************************************
 
 span {
     background-color: #ffff;
@@ -204,3 +207,38 @@ h5{
 svg.highcharts-root {
   height: 250px !important;
 }
+
+@media (max-width: 768px) {
+  .col {
+    flex: 0 0 100%; 
+    margin-right: 0; 
+  }
+  
+  
+  .num {
+    text-align: center;
+    margin-top: 0;
+  }
+
+  .member-row {
+    margin-top: 20px; 
+  }
+
+  .team-row {
+    margin-top: 20px;
+  }
+
+ .line-chart{
+  width: 100vw;
+ height: 100vh;
+ }
+
+ .bar-chart{
+  width: 100vw;
+ }
+
+
+
+}
+
+
