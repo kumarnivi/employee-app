@@ -23,7 +23,7 @@ export class LeaveModelComponent {
 	selectedDate: NgbDate | null = null;
 
 
-	category: string = 'casual';
+	category: string = '';
 	// fromDate: string = '';
 	// toDate: string = '';
 	duration: any;
@@ -34,14 +34,18 @@ export class LeaveModelComponent {
 
 	constructor(private datePipe: DatePipe, private http: HttpClient,private leaveService: LeaveService) {	}
 
+	getSelectedType(): string {
+		return this.leaveService.selectedType;
+	  }
 
 	submitLeave() {
-
+		
+	  
 	
 		const formData = {
-			category: this.category,
+			category: this.getSelectedType(),
 			fromDate: this.ngbDateToISOString(this.fromDate),
-			toDate: this.ngbDateToISOString(this.toDate),     
+			toDate: this.toDate ? this.ngbDateToISOString(this.toDate) : null,   
 			duration:this.calculateDaysBetweenDates(this.fromDate, this.toDate),
 			reason: this.reason			
 		};
@@ -51,12 +55,14 @@ export class LeaveModelComponent {
 			(response: any) => {
 			  console.log('Leave request submitted successfully');
 			  // Handle success here, e.g., show a success message.
+			  
 			},
 			(error) => {
 			  console.error('Error submitting leave request:', error);
 			  // Handle error here, e.g., display an error message.
 			}
 		  );
+		 
 	}
 
 

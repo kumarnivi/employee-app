@@ -1,5 +1,5 @@
 import { Component , OnInit } from '@angular/core';
-
+import { LeaveService } from 'src/app/leave.service';
 @Component({
   selector: 'app-leaverequest',
   templateUrl: './leaverequest.component.html',
@@ -14,10 +14,14 @@ export class LeaverequestComponent implements OnInit{
   totalPages!: number;
   pages: number[] = [];
   visiblePages: number[] = [];
-  constructor() {}
+
+
+  constructor(private leaveService: LeaveService) {}
 
   ngOnInit(): void {
-    // Populate your data here (replace with your actual data)
+   
+
+    
     this.data = [
       {
         duration: '21st Jan to 24th',
@@ -237,7 +241,23 @@ export class LeaverequestComponent implements OnInit{
 
     // Initialize the pages array
     this.updatePages();
+
+    // this.fetchLeaveRequests();
+
   }
+
+
+  // fetchLeaveRequests(): void {
+  //   this.leaveService.getLeaveRequests().subscribe(
+  //     (data) => {
+  //       this.leaveRequests = data;
+  //     },
+  //     (error) => {
+  //       console.error('Error fetching leave requests:', error);
+  //       // Handle error here, e.g., display an error message.
+  //     }
+  //   );
+  // }
 
  
   filterDataByType(): void {

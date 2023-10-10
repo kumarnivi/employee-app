@@ -13,7 +13,7 @@ const MyModel = sequelize.define('MyModel', {
   },
   toDate: {
     type: Sequelize.DATE,
-    allowNull: false
+    allowNull: true
   },
   duration: {
     type: Sequelize.INTEGER,

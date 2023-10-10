@@ -2,13 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { Router,  } from '@angular/router';
 import { NavigationStart, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { LeaveService } from 'src/app/leave.service';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent  {
-  
+  selectedType: string = ''
 
   activeLink: string = '/';
 
@@ -18,7 +20,13 @@ export class SidebarComponent  {
   shouldDisplayContent = false; 
   marginRightValue = '250px'; 
   translateXValue = '0'; 
+  
+ constructor(private leaveService: LeaveService) {}
  
+ 
+ setSelectedType(type: string) {
+  this.leaveService.selectedType = type;
+}
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;

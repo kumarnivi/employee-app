@@ -32,7 +32,7 @@ h3{
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
   width: 977px;
-    height: 708px;
+    height: 692px;
     max-height: 100%;
     border: none;
   }
@@ -167,6 +167,7 @@ h3{
 font-size: 16px !important;
 font-weight: bold !important;
 color: red !important;
+margin-left: 20px !important;
 }
 
   ngb-datepicker {
@@ -195,19 +196,35 @@ color: red !important;
 
   /* Apply custom styles to the NgbDatepicker component */
 ::ng-deep .ngb-dp-header {
-  // background-color: red !important;
+background-color: transparent !important;
   color: white;
   font-weight: bold;
+  display: flex;
+  justify-content: flex-end;
 }
 
-::ng-deep .ngb-dp-day, ::ng-deep .ngb-dp-month, ::ng-deep .ngb-dp-year {
+::ng-deep .ngb-dp-day, ::ng-deep .ngb-dp-month, ::ng-deep .ngb-dp-year, ::ng-deep .ngb-dp-weekday {
   color: black !important;
  margin-left: 15px;
  margin-bottom: 5px;
+ font-style: normal !important;
+ font-weight: 500;
+ 
 }
 
 ::ng-deep .ng-dp-week{
   margin-bottom: 10px !important;
+}
+::ng-deep .ngb-dp-weekdays{
+ background-color: transparent;
+ border-bottom: 2px solid #C083FA !important;
+ 
+}
+
+::ng-deep  .ngb-dp-arrow-btn{
+  color: #C083FA !important;
+ 
+ 
 }
 
 
@@ -226,4 +243,15 @@ padding: 10px;
 text-align: center;
 }
 
+
+.ngb-dp-weekdays {
+  /* border-bottom: 1px solid var(--bs-border-color); */
+  /* border-radius: 0; */
+  /* background-color: var(--bs-light); */
+  background-color: red !important;
+}
+
+ngb-datepicker .custom-weekdays{
+  color: red !important;
+}
 

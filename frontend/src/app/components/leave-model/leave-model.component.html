@@ -13,10 +13,10 @@
         <div class="col-md-5">
         <h3>Select Day</h3>
         
-      <ngb-datepicker #dp class="" (dateSelect)="onDateSelection($event)" [displayMonths]="1" [dayTemplate]="t" outsideDays="hidden">
+      <ngb-datepicker #dp class="custom-weekdays" (dateSelect)="onDateSelection($event)" [displayMonths]="1" [dayTemplate]="t" outsideDays="hidden" >
       </ngb-datepicker>
 
-<p>Selected Month and Year: {{ selectedMonthYear }}</p>
+
 <ng-template #t let-date let-focused="focused">
 	<span
 		class="custom-day "
@@ -74,10 +74,10 @@
             <div class="row">
                 <h3>Leave Summay</h3>
                 <div class="leave-summery-type">
-                  Type : <span class="calender"><img src="../../../assets/schedule.png" alt="calender" width="16" height="16">{{category}} </span>
+                  Type : <span class="calender"><img src="../../../assets/schedule.png" alt="calender" width="16" height="16"> {{ getSelectedType() }} </span>
                 </div>
                 <div class="leave-summery-type " >
-              Duration : <span class="calender" style=" margin-right: 20px;">{{ calculateDaysBetweenDates(fromDate, toDate)}}</span> <span class="calender">{{ ngbDateToDate(fromDate) | date:'dd-MM-yyyy' }} </span> <span class="calender"> {{ ngbDateToDate(toDate) | date:'yyyy-MM-dd' }}</span>
+              Duration : <span class="calender" style=" margin-right: 20px;"> {{ calculateDaysBetweenDates(fromDate, toDate)}} </span> <span class="calender">{{ ngbDateToDate(fromDate) | date:'dd-MM-yyyy' }} </span> <span class="calender"> {{ ngbDateToDate(toDate) | date:'yyyy-MM-dd' }}</span>
                 </div>
                 <div class="leave-summery-type ">
                  Recipent :  <span class="calender"> <img src="../../../assets/woman-128.png" alt="calender" width="20" height="20"> Emile</span>
@@ -100,36 +100,7 @@
 
 
 
-      <!-- <form (submit)="submitLeave()">
-        <div class="form-group">
-          <label for="category">Category:</label>
-          <input type="text" id="category" class="form-control" [(ngModel)]="category" name="category" required>
-        </div>
-      
-        <div class="form-group">
-          <label for="fromDate">From Date:</label>
-          <input type="date" id="fromDate" class="form-control" [(ngModel)]="fromDate" name="fromDate" required>
-        </div>
-      
-        <div class="form-group">
-          <label for="toDate">To Date:</label>
-          <input type="date" id="toDate" class="form-control" [(ngModel)]="toDate" name="toDate" required>
-        </div>
-      
-        <div class="form-group">
-          <label for="duration">Duration:</label>
-          <input type="text" id="duration" class="form-control" [(ngModel)]="duration" name="duration">
-        </div>
-      
-        <div class="form-group">
-          <label for="reason">Reason:</label>
-          <textarea id="reason" class="form-control" [(ngModel)]="reason" name="reason" rows="4" required></textarea>
-        </div>
-      
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form> -->
-      
-      
+
       </div>
     </div>
   </div>
