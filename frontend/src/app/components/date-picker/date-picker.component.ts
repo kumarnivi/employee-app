@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Output,EventEmitter  } from '@angular/core';
 import { NgbDate, NgbCalendar, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { JsonPipe } from '@angular/common';
@@ -13,20 +13,35 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./date-picker.component.scss']
 })
 export class DatePickerComponent {
-
-
-  hoveredDate: NgbDate | null = null;
-
-	fromDate: NgbDate;
+	
+    hoveredDate: NgbDate | null = null;
+	fromDate!: NgbDate;
 	toDate: NgbDate | null = null;
 	selectedMonthYear: string = '';
 	selectedDate: NgbDate | null = null;
 
-	constructor(calendar: NgbCalendar,  private datePipe: DatePipe) {
-		this.fromDate = calendar.getToday();
-		this.toDate = calendar.getNext(calendar.getToday(), 'd', 10);
-		this.updateSelectedMonthYear(this.fromDate);
-	}
+
+	@Output() numberOfDaysChange = new EventEmitter<number>()
+
+	constructor(private datePipe: DatePipe) {	}
+
+
+	calculateDaysBetweenDates(fromDate: NgbDate | null, toDate: NgbDate | null): number | null {
+		if (fromDate && toDate) {
+		  const fromDateJS:any = this.ngbDateToDate(fromDate);
+		  const toDateJS:any = this.ngbDateToDate(toDate);
+	
+		  const timeDifference = toDateJS.getTime() - fromDateJS.getTime();
+		  const daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
+		  return daysDifference + 1;
+		 
+		}
+	
+		return 1;
+		
+	  }
+
+
 
 	ngbDateToDate(ngbDate: NgbDate | null): Date | null {
 		if (ngbDate) {

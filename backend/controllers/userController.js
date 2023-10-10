@@ -21,4 +21,19 @@ const MyModel = require('../models/user');
     }
   };
 
-  module.exports = UserModel;
+
+
+
+const getAllRecords = async (req, res) => {
+  try {
+    const records = await MyModel.findAll();
+
+    res.status(200).json({ data: records });
+  } catch (error) {
+    console.error('Error fetching records:', error);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+};
+
+
+  module.exports = { UserModel, getAllRecords }

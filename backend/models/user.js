@@ -26,7 +26,7 @@ const MyModel = sequelize.define('MyModel', {
 });
 
 try {
-  MyModel.sync({ force: true })
+  MyModel.sync({ force: false })
     .then(() => {
       console.log('Table created successfully.');
     })
