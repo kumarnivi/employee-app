@@ -10,7 +10,7 @@ const UserRoute = require('./routes/userRoute')
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ['http://localhost:4200', 'https://leave-application.netlify.app/' ];
+const allowedOrigins = ['http://localhost:4200', 'https://leave-application.netlify.app' ];
 app.use(cors({
   origin: allowedOrigins
 }));
