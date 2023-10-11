@@ -5,17 +5,18 @@ const cors = require('cors'); //
 
 const sequelize = require('./db/database');
 const MyModel = require('./models/user');
+const Employee = require('./models/employee')
 const UserRoute = require('./routes/userRoute')
 
 const app = express();
 app.use(express.json());
 
-const allowedOrigins = ['http://localhost:4200', 'https://leave-application.netlify.app' ];
-app.use(cors({
-  origin: allowedOrigins
-}));
+// const allowedOrigins = ['http://localhost:4200'];
+// app.use(cors({
+//   origin: allowedOrigins
+// }));
 
-// app.use(cors());
+ app.use(cors());
 
 app.use('/api',  UserRoute)
 

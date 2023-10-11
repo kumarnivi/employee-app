@@ -2,7 +2,11 @@ const Sequelize = require('sequelize');
 const sequelize = require('../db/database');
 
 
-const MyModel = sequelize.define('MyModel', {
+const Employee = sequelize.define('Employee', {
+    user:{
+        type: Sequelize.STRING,
+        allowNull: false
+    },
   category: {
     type: Sequelize.STRING,
     allowNull: false
@@ -23,16 +27,16 @@ const MyModel = sequelize.define('MyModel', {
     type: Sequelize.STRING,
     allowNull: false
   },
-  // status: {
-  //   type: Sequelize.STRING,
-  //   allowNull: true,
-  //   defaultValue: 'pending', 
-  // },
+  status: {
+    type: Sequelize.STRING,
+    allowNull: true,
+    defaultValue: 'pending', 
+  },
   
 });
 
 try {
-  MyModel.sync({ force: false })
+    Employee.sync({ force: false })
     .then(() => {
       console.log('Table created successfully.');
     })
@@ -44,13 +48,5 @@ try {
 }
 
 
-// MyModel.sync({ force: false })
-//   .then(() => {
-//     console.log('Table synchronized successfully.');
-//   })
-//   .catch(err => {
-//     console.error('Error synchronizing table:', err);
-//   });
 
-
-module.exports = MyModel;
+module.exports = Employee;

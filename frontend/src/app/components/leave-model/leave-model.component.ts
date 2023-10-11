@@ -28,6 +28,7 @@ export class LeaveModelComponent {
 	// toDate: string = '';
 	duration: any;
 	reason: string = '';
+	user:string = 'mery';
    
 
 
@@ -47,7 +48,8 @@ export class LeaveModelComponent {
 			fromDate: this.ngbDateToISOString(this.fromDate),
 			toDate: this.toDate ? this.ngbDateToISOString(this.toDate) : null,   
 			duration:this.calculateDaysBetweenDates(this.fromDate, this.toDate),
-			reason: this.reason			
+			reason: this.reason,
+			user:this.user	
 		};
 
 

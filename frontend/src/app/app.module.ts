@@ -16,8 +16,6 @@ import { LeaveRequestConfirmModalComponent } from './components/leave-request-co
 import { NavsideComponent } from './admin/navside/navside.component';
 import { GraphComponent } from './admin/graph/graph.component';
 import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
-// import { CanvasJSAngularStockChartsModule } from '@canvasjs/angular-stockcharts';
-import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AddSubadminComponent } from './admin/add-subadmin/add-subadmin.component';
 import { LeavesComponent } from './components/leaves/leaves.component';
@@ -66,7 +64,6 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
       provide: DateAdapter,
       useFactory: adapterFactory,
     }),
-    CanvasJSAngularChartsModule,
     NgbModule,
     HttpClientModule
 

@@ -1,5 +1,7 @@
 import { Component , OnInit } from '@angular/core';
 import { LeaveService } from 'src/app/leave.service';
+import { HttpClient } from '@angular/common/http';
+
 @Component({
   selector: 'app-leaverequest',
   templateUrl: './leaverequest.component.html',
@@ -8,230 +10,57 @@ import { LeaveService } from 'src/app/leave.service';
 export class LeaverequestComponent implements OnInit{
   selectedType: string | null = 'Sort by';
   originalData: any[] = [];
-  data: any[] = []; // Your table data
-  itemsPerPage = 3; // Number of items to display per page
-  currentPage = 1; // Current page number
+
+  itemsPerPage = 3; 
+  currentPage = 1; 
   totalPages!: number;
   pages: number[] = [];
   visiblePages: number[] = [];
+  leaveRequests:any[]= []
+  item:any[] = []; 
 
+  data: any[] = [];
 
-  constructor(private leaveService: LeaveService) {}
+  constructor(private leaveService: LeaveService,private http: HttpClient) {}
 
   ngOnInit(): void {
-   
+
+    this.leaveService.getAllRecords().subscribe(
+      (data: any) => {
+        this.leaveRequests = data.data;
+        console.log(data)
+      },
+      (error) => {
+        console.error('Error fetching leave requests:', error);
+      }
+    );
 
     
-    this.data = [
-      {
-        duration: '21st Jan to 24th',
-        type: 'Casual',
-        status: 'Pending',
-        src:'../../../assets/schedule.png',
-        day: '1 Day',
-        dot: ''
-      },
+    this.item = [
+      
       {
         duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Denied',
-        src:'../../../assets/coconut-tree.png',
-        day: 'Half Day',
-        dot:'	'
-      },
-
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
+        type: 'Medical',
         status: 'Approved',
-        src:'../../../assets/coconut-tree.png',
-        day: 'Half Day',
-
+        src:'../../../assets/medical.png',
+        dot:'pending'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
         src:'../../../assets/medical.png',
-        day: '2 Day',
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
+        dot:'pending'
       },
       {
         duration: '25th Feb to 28th',
         type: 'Medical',
         status: 'Approved',
         src:'../../../assets/medical.png',
-        day: '2 Day',
+        dot:'pending'
       },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      }, {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '21st Jan to 24th',
-        type: 'Casual',
-        status: 'Pending',
-        src:'../../../assets/schedule.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
-      },
+      
 
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
-
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      }, {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '21st Jan to 24th',
-        type: 'Casual',
-        status: 'Pending',
-        src:'../../../assets/schedule.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
-      },
-
-      {
-        duration: '25th Feb to 28th',
-        type: 'Annual',
-        status: 'Approved',
-        src:'../../../assets/coconut-tree.png'
-
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      }, {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png'
-      },
-      // Add more data items as needed
     ];
 
     this.originalData = [...this.data];
@@ -242,23 +71,8 @@ export class LeaverequestComponent implements OnInit{
     // Initialize the pages array
     this.updatePages();
 
-    // this.fetchLeaveRequests();
-
+ 
   }
-
-
-  // fetchLeaveRequests(): void {
-  //   this.leaveService.getLeaveRequests().subscribe(
-  //     (data) => {
-  //       this.leaveRequests = data;
-  //     },
-  //     (error) => {
-  //       console.error('Error fetching leave requests:', error);
-  //       // Handle error here, e.g., display an error message.
-  //     }
-  //   );
-  // }
-
  
   filterDataByType(): void {
     if (this.selectedType) {

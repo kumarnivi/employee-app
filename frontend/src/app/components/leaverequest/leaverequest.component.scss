@@ -61,7 +61,9 @@ span {
   border-radius: 20px;
   color: black;
   padding: 3px 10px 3px 10px;
+  margin-right: 5px;
 }
+
 
 th {
   padding: 20px;
@@ -179,3 +181,16 @@ td {
       text-align: right;
   }
 } 
+
+
+@media (min-width: 577px) and (max-width: 991px) {
+ 
+ .state{
+  
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+ }
+
+ 
+}
