@@ -25,70 +25,61 @@ export class LeaverequestComponent implements OnInit{
 
   ngOnInit(): void {
 
+    // this.leaveService.getAllRecords().subscribe(
+    //   (data: any) => {
+    //     this.leaveRequests = data.data;
+    //     console.log(data)
+    //   },
+    //   (error) => {
+    //     console.error('Error fetching leave requests:', error);
+    //   }
+    // );
+
+    
     this.leaveService.getAllRecords().subscribe(
       (data: any) => {
         this.leaveRequests = data.data;
-        console.log(data)
+        this.originalData = [...this.leaveRequests];
+        this.totalPages = Math.ceil(this.leaveRequests.length / this.itemsPerPage);
+        this.updatePages();
       },
-      (error) => {
-        console.error('Error fetching leave requests:', error);
+      (error: any) => {
+        console.error('Error fetching leave records:', error);
       }
     );
 
-    
-    this.item = [
-      
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'pending'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'pending'
-      },
-      {
-        duration: '25th Feb to 28th',
-        type: 'Medical',
-        status: 'Approved',
-        src:'../../../assets/medical.png',
-        dot:'pending'
-      },
-      
 
-    ];
-
-    this.originalData = [...this.data];
-
-    // Calculate the total number of pages
-    this.totalPages = Math.ceil(this.data.length / this.itemsPerPage);
-
-    // Initialize the pages array
-    this.updatePages();
-
+   
  
   }
  
+ 
+
+
+
+
+
+
+
   filterDataByType(): void {
-    if (this.selectedType) {
-      this.data = this.originalData.filter(item => item.type === this.selectedType);
-    } else {
-      // If no type is selected, reset the data to the original data
-      this.data = [...this.originalData];
+    if (this.selectedType === 'All') {    
+      this.leaveRequests = [...this.originalData];
     }
-  
-    // Recalculate the total number of pages and update the pages array
-    this.totalPages = Math.ceil(this.data.length / this.itemsPerPage);
+    else if (this.selectedType ) {
+      this.leaveRequests = this.originalData.filter((item) => item.category === this.selectedType);
+    }
+     else {
+      this.leaveRequests = [...this.originalData];
+    }
+
+    this.totalPages = Math.ceil(this.leaveRequests.length / this.itemsPerPage);
     this.updatePages();
-  
-    // Reset the current page to 1
     this.currentPage = 1;
   }
+
+
+
+  
 
   // Helper function to update the pages array
   updatePages(): void {
@@ -97,7 +88,7 @@ export class LeaverequestComponent implements OnInit{
   }
 
   updateVisiblePages(): void {
-    const maxVisiblePages = 5; // Adjust the number of visible pages as needed
+    const maxVisiblePages = 5;
     const middlePage = Math.floor(maxVisiblePages / 2);
 
     if (this.totalPages <= maxVisiblePages) {
@@ -114,7 +105,6 @@ export class LeaverequestComponent implements OnInit{
     }
   }
 
-  // Function to set the current page
   setPage(page: number): void {
     if (page >= 1 && page <= this.totalPages) {
       this.currentPage = page;
@@ -122,7 +112,6 @@ export class LeaverequestComponent implements OnInit{
     }
   }
 
-  // Function to navigate to the previous page
   prevPage(): void {
     if (this.currentPage > 1) {
       this.currentPage--;
@@ -130,12 +119,12 @@ export class LeaverequestComponent implements OnInit{
     }
   }
 
-  // Function to navigate to the next page
   nextPage(): void {
     if (this.currentPage < this.totalPages) {
       this.currentPage++;
       this.updateVisiblePages();
     }
-  }
+
+}
 
 }

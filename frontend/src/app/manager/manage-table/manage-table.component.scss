@@ -144,8 +144,56 @@ td {
 
 .denied {
   background-color: red;
-//   background-image: url('../../../assets/woman-128.png');
+
 }
+
+
+
+.annual{
+  background-image: url('../../../assets/coconut-tree.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+}
+
+.medical{
+  background-image: url('../../../assets/medical.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+}
+
+
+.acedamic{
+  background-image: url('../../../assets/graduation-hat.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+
+}
+
+.casual{
+  background-image: url('../../../assets/schedule.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+}
+
+
+.custom{
+  background-image: url('../../../assets/hand.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+
+}
+
+
 
  h3{
   font-size: 22px;

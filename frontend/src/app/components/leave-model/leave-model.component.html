@@ -77,7 +77,7 @@
                   Type : <span class="calender"><img src="../../../assets/schedule.png" alt="calender" width="16" height="16"> {{ getSelectedType() }} </span>
                 </div>
                 <div class="leave-summery-type " >
-              Duration : <span class="calender" style=" margin-right: 20px;"> {{ calculateDaysBetweenDates(fromDate, toDate)}} Days </span> <span class="calender">{{ ngbDateToDate(fromDate) | date:'dd-MM-yyyy' }} </span> <span class="calender"> {{ ngbDateToDate(toDate) | date:'yyyy-MM-dd' }}</span>
+              Duration : <span class="calender" style=" margin-right: 20px;"> {{ calculateDaysBetweenDates(fromDate, toDate)}} {{ calculateDaysBetweenDates(fromDate, toDate) === 1 ? 'Day' : 'Days' }} </span> <span class="calender">{{ ngbDateToDate(fromDate) | date:'dd-MM-yyyy' }} </span> <span class="calender"> {{ ngbDateToDate(toDate) | date:'yyyy-MM-dd' }}</span>
                 </div>
                 <div class="leave-summery-type ">
                  Recipent :  <span class="calender"> <img src="../../../assets/woman-128.png" alt="calender" width="20" height="20"> {{user}} Emile</span>

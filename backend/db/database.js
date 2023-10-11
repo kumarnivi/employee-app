@@ -1,15 +1,15 @@
 
 const Sequelize = require('sequelize');
 
-// const sequelize = new Sequelize('mydb', 'root', 'root0', {
-//   host: 'localhost',
-//   dialect: 'mysql'
-// });
-
-const sequelize = new Sequelize('bpuimhpednzk8ebzbzxg', 'uxwbhkqhrhocxx1h', 'NXxYdz7ZXbCNhy1R6oQo', {
-  host: 'bpuimhpednzk8ebzbzxg-mysql.services.clever-cloud.com',
+const sequelize = new Sequelize('mydb', 'root', 'root0', {
+  host: 'localhost',
   dialect: 'mysql'
 });
+
+// const sequelize = new Sequelize('bpuimhpednzk8ebzbzxg', 'uxwbhkqhrhocxx1h', 'NXxYdz7ZXbCNhy1R6oQo', {
+//   host: 'bpuimhpednzk8ebzbzxg-mysql.services.clever-cloud.com',
+//   dialect: 'mysql'
+// });
 
 
 

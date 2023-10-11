@@ -1,5 +1,5 @@
 
-const MyModel = require('../models/user');
+
 const Employee = require('../models/employee')
 
 

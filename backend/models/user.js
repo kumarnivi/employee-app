@@ -3,32 +3,20 @@ const sequelize = require('../db/database');
 
 
 const MyModel = sequelize.define('MyModel', {
-  category: {
+
+  user: {
     type: Sequelize.STRING,
-    allowNull: false
-  },
-  fromDate: {
-    type: Sequelize.DATE,
-    allowNull: false
-  },
-  toDate: {
-    type: Sequelize.DATE,
     allowNull: true
   },
-  duration: {
-    type: Sequelize.INTEGER,
-    allowNull: false
-  },
-  reason: {
+  Email: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: true
   },
-  // status: {
-  //   type: Sequelize.STRING,
-  //   allowNull: true,
-  //   defaultValue: 'pending', 
-  // },
-  
+  pasword: {
+    type: Sequelize.STRING,
+    allowNull: true
+  },
+
 });
 
 try {

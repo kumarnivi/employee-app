@@ -162,6 +162,52 @@ td {
 }
 
 
+// ****************************
+
+.annual{
+  background-image: url('../../../assets/coconut-tree.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+}
+
+.medical{
+  background-image: url('../../../assets/medical.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+}
+
+
+.acedamic{
+  background-image: url('../../../assets/graduation-hat.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+
+}
+
+.casual{
+  background-image: url('../../../assets/schedule.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+}
+
+
+.custom{
+  background-image: url('../../../assets/hand.png');
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 16px 16px;
+  border: none;
+
+}
+
 @media (max-width: 767px) {
   /* CSS for small screens (e.g., mobile) */
   .leave-container table tbody tr {

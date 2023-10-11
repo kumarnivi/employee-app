@@ -10,8 +10,9 @@
                           style="border: none; background: transparent; outline: none;"
                       >
                           <option value="Sort by" selected>Sort by</option>
-                          <option value="casual">Casual</option>
-                          <option value="annual">Annual</option>
+                          <option value="All">All</option>
+                          <option value="Casual">Casual</option>
+                          <option value="Annual">Annual</option>
                           <option value="Medical">Medical</option>
                       </select>
                       <div class="filter">
@@ -42,13 +43,22 @@
                               ), let items of item;
                           "
                       >
-                          <td>  {{ request.fromDate | date }}
-                            {{ request.toDate | date }} 
-                            <span class="status">{{ request.duration }} Days</span>
+                          <td>  {{ request.fromDate | dateMonth  }}
+                            {{ request.toDate | dateMonth  }} 
+                            <span class="status">{{ request.duration }} {{request.duration === 1 ? 'Day' : 'Days'}}</span>
                         </td>
                           <td class="td-type">
                               <span class="status">
-                            <img src="../../../assets/coconut-tree.png" alt="img-leav" width="16" height="16" /> {{ request.category }}</span>
+                                <span class="status" style="padding-left: 5px; width:16px; height:16px;"
+                                [ngClass]="{
+                                    casual: request.category === 'Casual',
+                                    annual: request.category === 'Annual',
+                                    medical: request.category === 'Medical',
+                                    acedamic: request.category === 'Acedamic',
+                                    custom :request.category === 'Custom'
+                                }" >
+                                    </span>
+                            {{ request.category }}</span>
                           </td>
                           <td class="td-status"  >
                               <span class="status">
@@ -122,5 +132,4 @@
     </table>
   </div> -->
  
-  
   

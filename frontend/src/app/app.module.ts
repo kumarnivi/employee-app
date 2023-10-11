@@ -27,7 +27,11 @@ import { TableViewComponent } from './manager/table-view/table-view.component';
 import { LineChartComponent } from './admin/line-chart/line-chart.component';
 import { ApprovedViewComponent } from './manager/approved-view/approved-view.component';
 import { TeamAvailableComponent } from './manager/team-available/team-available.component';
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
+import { DateMonthPipe } from './date-month.pipe'; // Import HttpClientModule
+
+
+
 
 @NgModule({
   declarations: [
@@ -52,7 +56,8 @@ import { HttpClientModule } from '@angular/common/http'; // Import HttpClientMod
     TableViewComponent,
     LineChartComponent,
     ApprovedViewComponent,
-    TeamAvailableComponent
+    TeamAvailableComponent,
+    DateMonthPipe
    
   ],
   imports: [
